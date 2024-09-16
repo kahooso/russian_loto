@@ -59,9 +59,10 @@
             // 
             // nextRoundButton
             // 
-            this.nextRoundButton.Location = new System.Drawing.Point(12, 116);
+            this.nextRoundButton.Location = new System.Drawing.Point(18, 178);
+            this.nextRoundButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nextRoundButton.Name = "nextRoundButton";
-            this.nextRoundButton.Size = new System.Drawing.Size(268, 41);
+            this.nextRoundButton.Size = new System.Drawing.Size(402, 63);
             this.nextRoundButton.TabIndex = 3;
             this.nextRoundButton.Text = "Играть";
             this.nextRoundButton.UseVisualStyleBackColor = true;
@@ -71,9 +72,10 @@
             // 
             this.oneCardRadioButton.AutoSize = true;
             this.oneCardRadioButton.Checked = true;
-            this.oneCardRadioButton.Location = new System.Drawing.Point(6, 19);
+            this.oneCardRadioButton.Location = new System.Drawing.Point(9, 29);
+            this.oneCardRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.oneCardRadioButton.Name = "oneCardRadioButton";
-            this.oneCardRadioButton.Size = new System.Drawing.Size(51, 17);
+            this.oneCardRadioButton.Size = new System.Drawing.Size(75, 24);
             this.oneCardRadioButton.TabIndex = 0;
             this.oneCardRadioButton.TabStop = true;
             this.oneCardRadioButton.Text = "Одна";
@@ -83,9 +85,10 @@
             // twoCardRadioButton
             // 
             this.twoCardRadioButton.AutoSize = true;
-            this.twoCardRadioButton.Location = new System.Drawing.Point(63, 19);
+            this.twoCardRadioButton.Location = new System.Drawing.Point(94, 29);
+            this.twoCardRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.twoCardRadioButton.Name = "twoCardRadioButton";
-            this.twoCardRadioButton.Size = new System.Drawing.Size(46, 17);
+            this.twoCardRadioButton.Size = new System.Drawing.Size(64, 24);
             this.twoCardRadioButton.TabIndex = 1;
             this.twoCardRadioButton.Text = "Две";
             this.twoCardRadioButton.UseVisualStyleBackColor = true;
@@ -94,9 +97,10 @@
             // threeCardRadioButton
             // 
             this.threeCardRadioButton.AutoSize = true;
-            this.threeCardRadioButton.Location = new System.Drawing.Point(6, 42);
+            this.threeCardRadioButton.Location = new System.Drawing.Point(9, 65);
+            this.threeCardRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.threeCardRadioButton.Name = "threeCardRadioButton";
-            this.threeCardRadioButton.Size = new System.Drawing.Size(44, 17);
+            this.threeCardRadioButton.Size = new System.Drawing.Size(61, 24);
             this.threeCardRadioButton.TabIndex = 2;
             this.threeCardRadioButton.Text = "Три";
             this.threeCardRadioButton.UseVisualStyleBackColor = true;
@@ -105,9 +109,10 @@
             // fourthCardRadioButton
             // 
             this.fourthCardRadioButton.AutoSize = true;
-            this.fourthCardRadioButton.Location = new System.Drawing.Point(63, 42);
+            this.fourthCardRadioButton.Location = new System.Drawing.Point(94, 65);
+            this.fourthCardRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.fourthCardRadioButton.Name = "fourthCardRadioButton";
-            this.fourthCardRadioButton.Size = new System.Drawing.Size(64, 17);
+            this.fourthCardRadioButton.Size = new System.Drawing.Size(93, 24);
             this.fourthCardRadioButton.TabIndex = 3;
             this.fourthCardRadioButton.Text = "Четыре";
             this.fourthCardRadioButton.UseVisualStyleBackColor = true;
@@ -119,21 +124,25 @@
             this.cardsGroupBox.Controls.Add(this.fourthCardRadioButton);
             this.cardsGroupBox.Controls.Add(this.twoCardRadioButton);
             this.cardsGroupBox.Controls.Add(this.threeCardRadioButton);
-            this.cardsGroupBox.Location = new System.Drawing.Point(12, 9);
+            this.cardsGroupBox.Location = new System.Drawing.Point(18, 14);
+            this.cardsGroupBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cardsGroupBox.Name = "cardsGroupBox";
-            this.cardsGroupBox.Size = new System.Drawing.Size(131, 101);
+            this.cardsGroupBox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cardsGroupBox.Size = new System.Drawing.Size(196, 155);
             this.cardsGroupBox.TabIndex = 5;
             this.cardsGroupBox.TabStop = false;
             this.cardsGroupBox.Text = "Количество карт";
             // 
             // gameSettingsPanel
             // 
+            this.gameSettingsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(164)))), ((int)(((byte)(156)))));
             this.gameSettingsPanel.Controls.Add(this.difficultyGroupBox);
             this.gameSettingsPanel.Controls.Add(this.cardsGroupBox);
             this.gameSettingsPanel.Controls.Add(this.nextRoundButton);
-            this.gameSettingsPanel.Location = new System.Drawing.Point(440, 80);
+            this.gameSettingsPanel.Location = new System.Drawing.Point(727, 119);
+            this.gameSettingsPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gameSettingsPanel.Name = "gameSettingsPanel";
-            this.gameSettingsPanel.Size = new System.Drawing.Size(291, 160);
+            this.gameSettingsPanel.Size = new System.Drawing.Size(436, 246);
             this.gameSettingsPanel.TabIndex = 6;
             // 
             // difficultyGroupBox
@@ -141,9 +150,11 @@
             this.difficultyGroupBox.Controls.Add(this.hardRadioButton);
             this.difficultyGroupBox.Controls.Add(this.mediumRadioButton);
             this.difficultyGroupBox.Controls.Add(this.easyRadioButton);
-            this.difficultyGroupBox.Location = new System.Drawing.Point(149, 9);
+            this.difficultyGroupBox.Location = new System.Drawing.Point(224, 14);
+            this.difficultyGroupBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.difficultyGroupBox.Name = "difficultyGroupBox";
-            this.difficultyGroupBox.Size = new System.Drawing.Size(131, 101);
+            this.difficultyGroupBox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.difficultyGroupBox.Size = new System.Drawing.Size(196, 155);
             this.difficultyGroupBox.TabIndex = 6;
             this.difficultyGroupBox.TabStop = false;
             this.difficultyGroupBox.Text = "Сложность";
@@ -151,9 +162,10 @@
             // hardRadioButton
             // 
             this.hardRadioButton.AutoSize = true;
-            this.hardRadioButton.Location = new System.Drawing.Point(4, 65);
+            this.hardRadioButton.Location = new System.Drawing.Point(6, 100);
+            this.hardRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.hardRadioButton.Name = "hardRadioButton";
-            this.hardRadioButton.Size = new System.Drawing.Size(70, 17);
+            this.hardRadioButton.Size = new System.Drawing.Size(100, 24);
             this.hardRadioButton.TabIndex = 2;
             this.hardRadioButton.Text = "Тяжёлая";
             this.hardRadioButton.UseVisualStyleBackColor = true;
@@ -162,9 +174,10 @@
             // mediumRadioButton
             // 
             this.mediumRadioButton.AutoSize = true;
-            this.mediumRadioButton.Location = new System.Drawing.Point(6, 42);
+            this.mediumRadioButton.Location = new System.Drawing.Point(9, 65);
+            this.mediumRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.mediumRadioButton.Name = "mediumRadioButton";
-            this.mediumRadioButton.Size = new System.Drawing.Size(68, 17);
+            this.mediumRadioButton.Size = new System.Drawing.Size(101, 24);
             this.mediumRadioButton.TabIndex = 1;
             this.mediumRadioButton.Text = "Средняя";
             this.mediumRadioButton.UseVisualStyleBackColor = true;
@@ -174,9 +187,10 @@
             // 
             this.easyRadioButton.AutoSize = true;
             this.easyRadioButton.Checked = true;
-            this.easyRadioButton.Location = new System.Drawing.Point(6, 19);
+            this.easyRadioButton.Location = new System.Drawing.Point(9, 29);
+            this.easyRadioButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.easyRadioButton.Name = "easyRadioButton";
-            this.easyRadioButton.Size = new System.Drawing.Size(62, 17);
+            this.easyRadioButton.Size = new System.Drawing.Size(88, 24);
             this.easyRadioButton.TabIndex = 0;
             this.easyRadioButton.TabStop = true;
             this.easyRadioButton.Text = "Лёгкая";
@@ -185,26 +199,29 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nameToolStripLabel,
             this.balanceToolStripLabel,
             this.exitToolStripButton});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 33);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(743, 53);
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.toolStrip1.Size = new System.Drawing.Size(1176, 55);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // nameToolStripLabel
             // 
             this.nameToolStripLabel.Name = "nameToolStripLabel";
-            this.nameToolStripLabel.Size = new System.Drawing.Size(47, 50);
+            this.nameToolStripLabel.Size = new System.Drawing.Size(71, 50);
             this.nameToolStripLabel.Text = "Логин: ";
             // 
             // balanceToolStripLabel
             // 
             this.balanceToolStripLabel.Name = "balanceToolStripLabel";
-            this.balanceToolStripLabel.Size = new System.Drawing.Size(66, 50);
+            this.balanceToolStripLabel.Size = new System.Drawing.Size(98, 50);
             this.balanceToolStripLabel.Text = "Баланс: - €";
             // 
             // exitToolStripButton
@@ -222,9 +239,10 @@
             // 
             // appartmentButton
             // 
-            this.appartmentButton.Location = new System.Drawing.Point(452, 246);
+            this.appartmentButton.Location = new System.Drawing.Point(745, 374);
+            this.appartmentButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.appartmentButton.Name = "appartmentButton";
-            this.appartmentButton.Size = new System.Drawing.Size(268, 34);
+            this.appartmentButton.Size = new System.Drawing.Size(402, 81);
             this.appartmentButton.TabIndex = 8;
             this.appartmentButton.Text = "Квартира";
             this.appartmentButton.UseVisualStyleBackColor = true;
@@ -232,41 +250,48 @@
             // 
             // cardsFlowLayoutPanel
             // 
-            this.cardsFlowLayoutPanel.Location = new System.Drawing.Point(8, 80);
+            this.cardsFlowLayoutPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(170)))), ((int)(((byte)(167)))));
+            this.cardsFlowLayoutPanel.Location = new System.Drawing.Point(13, 119);
+            this.cardsFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cardsFlowLayoutPanel.Name = "cardsFlowLayoutPanel";
-            this.cardsFlowLayoutPanel.Size = new System.Drawing.Size(426, 200);
+            this.cardsFlowLayoutPanel.Size = new System.Drawing.Size(702, 348);
             this.cardsFlowLayoutPanel.TabIndex = 9;
             // 
             // drawnNumberLabel
             // 
-            this.drawnNumberLabel.Location = new System.Drawing.Point(8, 283);
+            this.drawnNumberLabel.Location = new System.Drawing.Point(13, 472);
+            this.drawnNumberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.drawnNumberLabel.Name = "drawnNumberLabel";
-            this.drawnNumberLabel.Size = new System.Drawing.Size(215, 13);
+            this.drawnNumberLabel.Size = new System.Drawing.Size(322, 20);
             this.drawnNumberLabel.TabIndex = 2;
             this.drawnNumberLabel.Text = "-";
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(172)))), ((int)(((byte)(172)))));
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.informationToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(743, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1176, 33);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // informationToolStripMenuItem
             // 
             this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
-            this.informationToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.informationToolStripMenuItem.Size = new System.Drawing.Size(137, 29);
             this.informationToolStripMenuItem.Text = "Информация";
             this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(183)))), ((int)(((byte)(179)))));
+            this.ClientSize = new System.Drawing.Size(1176, 692);
             this.Controls.Add(this.gameSettingsPanel);
             this.Controls.Add(this.cardsFlowLayoutPanel);
             this.Controls.Add(this.appartmentButton);
@@ -274,6 +299,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.drawnNumberLabel);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

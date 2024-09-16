@@ -1,4 +1,6 @@
-﻿namespace RussianLoto
+﻿using System;
+
+namespace RussianLoto
 {
     public class User
     {
@@ -30,6 +32,8 @@
         public string getLogin() { return this.login; }
 
         public int getWinAmount() { return this.win_amount; }
+
+        public Boolean isPaid(int count) { return (this.getBalance() - (50 * count)) > 0; }
 
         public void setWinAmount(int win_amount) { this.win_amount = win_amount; }
 

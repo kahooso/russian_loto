@@ -104,11 +104,9 @@ namespace RussianLoto
         private void InitializePlayer(User current_user) { this.current_player = current_user; }
         private void InitializeColors()
         {
-            BackColor = Color.PaleVioletRed;
-            gameSettingsPanel.BackColor = Color.AliceBlue;
-            cardsFlowLayoutPanel.BackColor = Color.LightGreen;
         }
-        private void InitializeFont() { Font = new Font("Roboto", 14, FontStyle.Regular); }
+
+        private void InitializeFont() { Font = new Font("Roboto", 12, FontStyle.Regular); }
 
         // datagridview settings
 
@@ -197,17 +195,17 @@ namespace RussianLoto
 
         // click events
 
-
-
         private void nextRoundButton_Click(object sender, EventArgs e)
         {
-            if (this.current_player.getBalance() - 50 < 0)
+            if (!this.current_player.isPaid(cards_count))
             {
                 MessageBox.Show("К сожалению у вас не хватает средств для покупки билета!", "=(", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             else
             {
+                this.current_player.setBalance(this.current_player.getBalance() - 50 * cards_count);
+                InitializeOtherComponents();
                 gameSettingsPanel.Enabled = false;
                 InitializeTimer();
                 Play();
@@ -245,35 +243,37 @@ namespace RussianLoto
 
         private void timer_Tick(object sender, EventArgs e) 
         {
-            if (drawnNumbers.Count != 90)
+            if (drawnNumbers.Count < 90)
                 Play();
             else TheEnd();
         }
+
+        private static int cards_count = 0;
         private void allChanges_RadioButton(object sender, EventArgs e)
         {
 
             RadioButton current_radiobutton = (RadioButton)sender;
-            int count = 0;
+            
 
             switch (current_radiobutton.Name)
             {
                 case "oneCardRadioButton":
-                    count = 1;
+                    cards_count = 1;
                     break;
                 case "twoCardRadioButton":
-                    count = 2;
+                    cards_count = 2;
                     break;
                 case "threeCardRadioButton":
-                    count = 3;
+                    cards_count = 3;
                     break;
                 case "fourthCardRadioButton":
-                    count = 4;
+                    cards_count = 4;
                     break;
             }
  
-            Array.Resize(ref cards, count);
+            Array.Resize(ref cards, cards_count);
 
-            for (int i = 0; i < count; ++i)
+            for (int i = 0; i < cards_count; ++i)
             {
                 cards[i] = new Card();
             }

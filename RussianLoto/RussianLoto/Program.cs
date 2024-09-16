@@ -16,7 +16,7 @@ namespace RussianLoto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new MainForm(new User("clappy", "123", 1500, 1500)));
         }
     }
 }
