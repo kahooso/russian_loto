@@ -1,0 +1,12 @@
+C:\Users\ryche\OneDrive\Desktop\russian_loto\RussianLoto\RussianLoto\bin\Debug\RussianLoto.exe.config
+C:\Users\ryche\OneDrive\Desktop\russian_loto\RussianLoto\RussianLoto\bin\Debug\RussianLoto.exe
+C:\Users\ryche\OneDrive\Desktop\russian_loto\RussianLoto\RussianLoto\bin\Debug\RussianLoto.pdb
+C:\Users\ryche\OneDrive\Desktop\russian_loto\RussianLoto\RussianLoto\obj\Debug\RussianLoto.csproj.AssemblyReference.cache
+C:\Users\ryche\OneDrive\Desktop\russian_loto\RussianLoto\RussianLoto\obj\Debug\RussianLoto.LoginForm.resources
+C:\Users\ryche\OneDrive\Desktop\russian_loto\RussianLoto\RussianLoto\obj\Debug\RussianLoto.Properties.Resources.resources
+C:\Users\ryche\OneDrive\Desktop\russian_loto\RussianLoto\RussianLoto\obj\Debug\RussianLoto.csproj.GenerateResource.cache
+C:\Users\ryche\OneDrive\Desktop\russian_loto\RussianLoto\RussianLoto\obj\Debug\RussianLoto.csproj.CoreCompileInputs.cache
+C:\Users\ryche\OneDrive\Desktop\russian_loto\RussianLoto\RussianLoto\obj\Debug\RussianLoto.exe
+C:\Users\ryche\OneDrive\Desktop\russian_loto\RussianLoto\RussianLoto\obj\Debug\RussianLoto.pdb
+C:\Users\ryche\OneDrive\Desktop\russian_loto\RussianLoto\RussianLoto\obj\Debug\RussianLoto.MainForm.resources
+C:\Users\ryche\OneDrive\Desktop\russian_loto\RussianLoto\RussianLoto\obj\Debug\RussianLoto.SigninForm.resources
