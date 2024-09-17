@@ -69,5 +69,14 @@ namespace RussianLoto.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Обычный.
+        /// </summary>
+        internal static string lastTheme {
+            get {
+                return ResourceManager.GetString("lastTheme", resourceCulture);
+            }
+        }
     }
 }

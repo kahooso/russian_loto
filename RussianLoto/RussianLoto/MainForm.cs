@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -27,6 +28,8 @@ namespace RussianLoto
 
         private int win_bonus_pay;
 
+        private SettingsForm settingsForm;
+
         private List<Barrel> barrels = new List<Barrel>();
         public MainForm(User current_user)
         {
@@ -42,18 +45,21 @@ namespace RussianLoto
         }
 
         // load 
-         
+
         private void MainForm_Load(object sender, EventArgs e) { }
 
         // initializations
 
         private void InitializeDifficulty() { this.difficulty = Difficulty.Easy; }
+
         private void InitializeCards() { cards[0] = new Card(); }
+
         private void InitializeOtherComponents()
         {
             balanceToolStripLabel.Text = ("Баланс: " + current_player.getBalance() + " €").Trim().ToString();
             nameToolStripLabel.Text = ("Логин: " + current_player.getLogin()).Trim().ToString();
         }
+
         private void InitializeBarrels()
         {
             for (Int32 i = 1; i <= 90; ++i)
@@ -62,13 +68,15 @@ namespace RussianLoto
             }
             ShakeTheBagOfBarrels();
         }
+
         private void ShakeTheBagOfBarrels()
         {
             this.barrels = barrels.OrderBy(a => random.Next()).ToList();
         }
+
         private void InitializeTimer()
         {
-            switch(difficulty)
+            switch (difficulty)
             {
                 case Difficulty.Easy:
                     timer.Interval = 5000;
@@ -86,6 +94,7 @@ namespace RussianLoto
             timer.Tick += new EventHandler(timer_Tick);
             timer.Start();
         }
+
         private void InitializeDataGridView()
         {
             cardsFlowLayoutPanel.Controls.Clear();
@@ -100,10 +109,40 @@ namespace RussianLoto
 
                 cardsFlowLayoutPanel.Controls.Add(dataGridView);
             }
+
+            fieldVisible(false);
         }
+
         private void InitializePlayer(User current_user) { this.current_player = current_user; }
+
         private void InitializeColors()
         {
+            string lastTheme = Properties.Settings.Default.lastTheme;
+
+            Color main_color = Color.White;
+            Color second_color = Color.LightGray;
+
+            switch (lastTheme)
+            {
+                case "Арктика":
+                    main_color = Color.SkyBlue;
+                    second_color = Color.AliceBlue;
+                    break;
+                case "Пустыня":
+                    main_color = Color.LightGoldenrodYellow;
+                    second_color = Color.LightYellow;
+                    break;
+                case "Обычная":
+                    main_color = Color.FromArgb(222, 183, 179);
+                    second_color = Color.FromArgb(137, 170, 167);
+                    break;
+            }
+
+            this.BackColor = main_color;
+            cardsFlowLayoutPanel.BackColor = second_color;
+            gameSettingsPanel.BackColor = second_color;
+            toolStrip1.BackColor = second_color;
+            menuStrip1.BackColor = second_color;
         }
 
         private void InitializeFont() { Font = new Font("Roboto", 12, FontStyle.Regular); }
@@ -127,6 +166,7 @@ namespace RussianLoto
                 }
             }
         }
+
         private void dataGridViewSettings(DataGridView dataGridView)
         {
             dataGridView.CellClick += DataGridView_CellClick;
@@ -134,14 +174,14 @@ namespace RussianLoto
             dataGridView.ColumnCount = 9;
             dataGridView.RowCount = 3;
 
-            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;  
-            dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;    
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
 
-            dataGridView.RowHeadersVisible = false;  
+            dataGridView.RowHeadersVisible = false;
             dataGridView.ColumnHeadersVisible = false;
 
             dataGridView.ReadOnly = true;
-            dataGridView.AllowUserToResizeColumns 
+            dataGridView.AllowUserToResizeColumns
                 = dataGridView.AllowUserToResizeRows = false;
 
             dataGridView.Width = 315;
@@ -154,21 +194,23 @@ namespace RussianLoto
             {
                 DataGridView dataGridView = (DataGridView)sender;
 
-                int rowIndex = e.RowIndex,
-                    columnIndex = e.ColumnIndex,
-                    cardIndex = cardsFlowLayoutPanel.Controls.IndexOf(dataGridView);
+                int rowIndex = e.RowIndex;
 
-                if (dataGridView.Rows[rowIndex].Cells[columnIndex].Value != null &&
-                    (Int32)dataGridView.Rows[rowIndex].Cells[columnIndex].Value != current_barrel_number)
+                int columnIndex = e.ColumnIndex;
+
+                int cardIndex = cardsFlowLayoutPanel.Controls.IndexOf(dataGridView);
+
+                if (dataGridView.Rows[rowIndex].Cells[columnIndex].Value != null && (Int32)dataGridView.Rows[rowIndex].Cells[columnIndex].Value == current_barrel_number)
                 {
                     dataGridView.Rows[rowIndex].Cells[columnIndex].Style.BackColor = Color.LightGreen;
+
                     dataGridView.Rows[rowIndex].Cells[columnIndex].Style.ForeColor = Color.DarkGreen;
 
                     cards[cardIndex].marked[rowIndex, columnIndex] = true;
 
                     if (cards[cardIndex].IsRowComplete(rowIndex))
                     {
-                        switch(rowIndex)
+                        switch (rowIndex)
                         {
                             case 0:
                                 full_row_marked_award = 300;
@@ -181,10 +223,12 @@ namespace RussianLoto
                                 break;
                         }
                         MessageBox.Show($"Строка {rowIndex + 1} на карточке {cardIndex + 1} заполнена!", "Поздравляем!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        
+
                         this.current_player.setBalance(this.current_player.getBalance() + full_row_marked_award + win_bonus_pay);
                         this.current_player.setWinAmount(this.current_player.getWinAmount() + full_row_marked_award + win_bonus_pay);
                     }
+
+                    checkIfAnyCardComplete();
                 }
             }
             catch (Exception)
@@ -193,7 +237,45 @@ namespace RussianLoto
             }
         }
 
+        private void checkIfAnyCardComplete()
+        {
+            foreach (Card card in this.cards)
+            {
+                if (isCardComplete(card))
+                {
+                    MessageBox.Show($"Карточка полностью заполнена!", "Победа!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.current_player.setBalance(this.current_player.getBalance() + full_row_marked_award + win_bonus_pay);
+                    this.current_player.setWinAmount(this.current_player.getWinAmount() + full_row_marked_award + win_bonus_pay);
+                    TheEnd();
+                }
+            }
+        }
+
+        private bool isCardComplete(Card card)
+        {
+            for (int row = 0; row < 3; ++row)
+            {
+                for (int col = 0; col < 3; ++col)
+                {
+                    if (card.numbers[row, col] != 0 && !card.marked[row, col])
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+
         // click events
+
+        private void fieldVisible(bool isVisible)
+        {
+            foreach (Control control in cardsFlowLayoutPanel.Controls)
+            {
+                control.Visible = isVisible;
+            }
+        }
 
         private void nextRoundButton_Click(object sender, EventArgs e)
         {
@@ -208,6 +290,7 @@ namespace RussianLoto
                 InitializeOtherComponents();
                 gameSettingsPanel.Enabled = false;
                 InitializeTimer();
+                fieldVisible(true);
                 Play();
             }
         }
@@ -221,8 +304,8 @@ namespace RussianLoto
             } while (drawnNumbers.Contains(drawnNumber));
 
             drawnNumbers.Add(drawnNumber);
-            
-            drawnNumberLabel.Text = "Последние бочки -> " + string.Join(", ", drawnNumbers.Reverse());
+
+            drawnNumberLabel.Text = "Бочонки -> " + string.Join(", ", drawnNumbers.Reverse());
             current_barrel_number = drawnNumber;
         }
 
@@ -230,18 +313,18 @@ namespace RussianLoto
         {
             MessageBox.Show("Игра закончена!", "Игра", MessageBoxButtons.OK, MessageBoxIcon.Information);
             gameSettingsPanel.Enabled = true;
-            timer.Stop();
+            fieldVisible(false);
             CalculateResults();
+            timer.Stop();
         }
 
         private void CalculateResults()
         {
-
         }
 
         // tick event
 
-        private void timer_Tick(object sender, EventArgs e) 
+        private void timer_Tick(object sender, EventArgs e)
         {
             if (drawnNumbers.Count < 90)
                 Play();
@@ -249,11 +332,12 @@ namespace RussianLoto
         }
 
         private static int cards_count = 0;
+
         private void allChanges_RadioButton(object sender, EventArgs e)
         {
 
             RadioButton current_radiobutton = (RadioButton)sender;
-            
+
 
             switch (current_radiobutton.Name)
             {
@@ -270,7 +354,7 @@ namespace RussianLoto
                     cards_count = 4;
                     break;
             }
- 
+
             Array.Resize(ref cards, cards_count);
 
             for (int i = 0; i < cards_count; ++i)
@@ -279,13 +363,14 @@ namespace RussianLoto
             }
 
             InitializeDataGridView();
-            
+
         }
+
         private void changeDifficulty_RadioButtons(object sender, EventArgs e)
         {
             RadioButton current_radiobutton = (RadioButton)sender;
 
-            switch(current_radiobutton.Name)
+            switch (current_radiobutton.Name)
             {
                 case "easyRadioButton":
                     this.difficulty = Difficulty.Easy;
@@ -337,6 +422,7 @@ namespace RussianLoto
                 MessageBox.Show("Ошибка: ID пользователя не найден!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private int GetUserIdByLogin(string login)
         {
             int userId = -1;
@@ -349,7 +435,7 @@ namespace RussianLoto
                 try
                 {
                     database.open_connection();
-                    userId = (int)command.ExecuteScalar(); // Получаем ID
+                    userId = (int)command.ExecuteScalar();
                 }
                 catch (Exception ex)
                 {
@@ -371,7 +457,84 @@ namespace RussianLoto
 
         private void informationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("hello");
+            MessageBox.Show("Традиционная российская игра, о существовании которой знает каждый. Благодаря простым правилам и азарту эта игра завоевала огромную популярность и встала в один ряд с такими развлечениями для большой весёлой компании, как домино и карты.\n\n\nКосовский Семён Андреевич 419/7", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Question);
+        }
+
+        private void настройкиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            settingsForm = new SettingsForm();
+
+            this.Hide();
+
+            settingsForm.ShowDialog();
+
+            this.Show();
+
+            Color main_color = settingsForm.MainColor;
+
+            Color second_color = settingsForm.SecondColor;
+
+            this.BackColor = main_color;
+
+            cardsFlowLayoutPanel.BackColor = second_color;
+            gameSettingsPanel.BackColor = second_color;
+            toolStrip1.BackColor = second_color;
+            menuStrip1.BackColor = second_color;
+        }
+
+        private void сохранитьКартыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+            saveFileDialog.Title = "Сохранить карты";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+
+                string filePath = saveFileDialog.FileName;
+
+                try
+                {
+
+                    using (StreamWriter writer = new StreamWriter(filePath))
+                    {
+                        for (int i = 0; i < cards.Length; i++)
+                        {
+                            writer.WriteLine($"Карта {i + 1}:");
+
+                            for (int row = 0; row < 3; row++)
+                            {
+                                string rowData = "";
+
+                                for (int col = 0; col < 9; col++)
+                                {
+                                    int number = cards[i].numbers[row, col];
+
+                                    rowData += (number == 0 ? "-" : number.ToString()) + " ";
+                                }
+
+                                writer.WriteLine(rowData.TrimEnd());
+                            }
+
+                            writer.WriteLine();
+                        }
+                    }
+
+                    MessageBox.Show("Карты успешно сохранены!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при сохранении карт: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void freeButton_Click(object sender, EventArgs e)
+        {
+            this.current_player.setBalance(this.current_player.getBalance() + 1500);
+            this.current_player.setWinAmount(this.current_player.getWinAmount() + 1500);
+            InitializeOtherComponents();
         }
     }
 }
