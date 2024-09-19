@@ -79,7 +79,7 @@ namespace RussianLoto
             switch (difficulty)
             {
                 case Difficulty.Easy:
-                    timer.Interval = 5000;
+                    timer.Interval = 100;
                     win_bonus_pay = 300;
                     break;
                 case Difficulty.Medium:
@@ -145,7 +145,7 @@ namespace RussianLoto
             menuStrip1.BackColor = second_color;
         }
 
-        private void InitializeFont() { Font = new Font("Roboto", 12, FontStyle.Regular); }
+        private void InitializeFont() { Font = new Font("Roboto", 10, FontStyle.Regular); }
 
         // datagridview settings
 
@@ -200,7 +200,7 @@ namespace RussianLoto
 
                 int cardIndex = cardsFlowLayoutPanel.Controls.IndexOf(dataGridView);
 
-                if (dataGridView.Rows[rowIndex].Cells[columnIndex].Value != null && (Int32)dataGridView.Rows[rowIndex].Cells[columnIndex].Value == current_barrel_number)
+                if (dataGridView.Rows[rowIndex].Cells[columnIndex].Value != null && drawnNumbers.Contains((Int32)dataGridView.Rows[rowIndex].Cells[columnIndex].Value))
                 {
                     dataGridView.Rows[rowIndex].Cells[columnIndex].Style.BackColor = Color.LightGreen;
 
@@ -243,7 +243,6 @@ namespace RussianLoto
             {
                 if (isCardComplete(card))
                 {
-                    MessageBox.Show($"Карточка полностью заполнена!", "Победа!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.current_player.setBalance(this.current_player.getBalance() + full_row_marked_award + win_bonus_pay);
                     this.current_player.setWinAmount(this.current_player.getWinAmount() + full_row_marked_award + win_bonus_pay);
                     TheEnd();
@@ -279,6 +278,7 @@ namespace RussianLoto
 
         private void nextRoundButton_Click(object sender, EventArgs e)
         {
+            drawnNumbers.Clear();
             if (!this.current_player.isPaid(cards_count))
             {
                 MessageBox.Show("К сожалению у вас не хватает средств для покупки билета!", "=(", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -311,11 +311,11 @@ namespace RussianLoto
 
         private void TheEnd()
         {
+            timer.Stop();
             MessageBox.Show("Игра закончена!", "Игра", MessageBoxButtons.OK, MessageBoxIcon.Information);
             gameSettingsPanel.Enabled = true;
             fieldVisible(false);
             CalculateResults();
-            timer.Stop();
         }
 
         private void CalculateResults()
@@ -394,7 +394,7 @@ namespace RussianLoto
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            int userId = GetUserIdByLogin(current_player.getLogin());
+            int userId = GetUserIdByLogin(this.current_player.getLogin());
 
             if (userId != -1) // Если удалось получить ID
             {
@@ -435,7 +435,12 @@ namespace RussianLoto
                 try
                 {
                     database.open_connection();
-                    userId = (int)command.ExecuteScalar();
+                    // Используем ExecuteScalar для получения одного значения
+                    object result = command.ExecuteScalar();
+                    if (result != null && result != DBNull.Value) // Проверяем, есть ли результат
+                    {
+                        userId = Convert.ToInt32(result); // Преобразуем результат в int
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -450,9 +455,11 @@ namespace RussianLoto
             return userId;
         }
 
+
         private void exitToolStripButton_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Вы уверены что хотите выйти? Процесс будет не сохранен!", "Игра", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes) this.Close();
+            if (MessageBox.Show("Вы уверены что хотите выйти? Процесс будет не сохранен!", "Игра", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+               this.Close();
         }
 
         private void informationToolStripMenuItem_Click(object sender, EventArgs e)

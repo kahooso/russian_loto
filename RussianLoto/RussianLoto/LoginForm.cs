@@ -62,7 +62,7 @@ namespace RussianLoto
                 data_adapter.Fill(data_table);
                 if (data_table.Rows.Count == 1)
                 {
-                    var user = new User(data_table.Rows[0].ItemArray[0].ToString(), data_table.Rows[0].ItemArray[1].ToString(), Convert.ToInt32(data_table.Rows[0].ItemArray[2].ToString()), Convert.ToInt32(data_table.Rows[0].ItemArray[3].ToString()));
+                    var user = new User(data_table.Rows[0].ItemArray[1].ToString(), data_table.Rows[0].ItemArray[2].ToString(), Convert.ToInt32(data_table.Rows[0].ItemArray[3].ToString()), Convert.ToInt32(data_table.Rows[0].ItemArray[4].ToString()));
                     MessageBox.Show("Вы успешно авторизовались!", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MainForm main_form = new MainForm(user);
                     this.Hide();
