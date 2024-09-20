@@ -23,3 +23,4 @@ C:\Users\ryche\Desktop\russian_loto\RussianLoto\RussianLoto\obj\Debug\RussianLot
 C:\Users\ryche\Desktop\russian_loto\RussianLoto\RussianLoto\obj\Debug\RussianLoto.exe
 C:\Users\ryche\Desktop\russian_loto\RussianLoto\RussianLoto\obj\Debug\RussianLoto.pdb
 C:\Users\ryche\OneDrive\Desktop\russian_loto\RussianLoto\RussianLoto\obj\Debug\RussianLoto.SettingsForm.resources
+C:\Users\ryche\Desktop\russian_loto\RussianLoto\RussianLoto\obj\Debug\RussianLoto.SettingsForm.resources

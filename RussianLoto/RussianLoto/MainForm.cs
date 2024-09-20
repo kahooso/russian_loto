@@ -33,11 +33,12 @@ namespace RussianLoto
         private List<Barrel> barrels = new List<Barrel>();
         public MainForm(User current_user)
         {
+
+            InitializePlayer(current_user);
             InitializeComponent();
             InitializeFont();
             InitializeDifficulty();
             InitializeColors();
-            InitializePlayer(current_user);
             InitializeBarrels();
             InitializeCards();
             InitializeDataGridView();
@@ -56,16 +57,19 @@ namespace RussianLoto
 
         private void InitializeOtherComponents()
         {
+
             balanceToolStripLabel.Text = ("Баланс: " + current_player.getBalance() + " €").Trim().ToString();
             nameToolStripLabel.Text = ("Логин: " + current_player.getLogin()).Trim().ToString();
         }
 
         private void InitializeBarrels()
         {
+
             for (Int32 i = 1; i <= 90; ++i)
             {
                 barrels.Add(new Barrel(i));
             }
+
             ShakeTheBagOfBarrels();
         }
 
@@ -76,10 +80,13 @@ namespace RussianLoto
 
         private void InitializeTimer()
         {
+
+            timer.Tick -= new EventHandler(timer_Tick);
+
             switch (difficulty)
             {
                 case Difficulty.Easy:
-                    timer.Interval = 100;
+                    timer.Interval = 5000;
                     win_bonus_pay = 300;
                     break;
                 case Difficulty.Medium:
@@ -91,7 +98,9 @@ namespace RussianLoto
                     win_bonus_pay = 500;
                     break;
             }
+
             timer.Tick += new EventHandler(timer_Tick);
+
             timer.Start();
         }
 
@@ -279,6 +288,7 @@ namespace RussianLoto
         private void nextRoundButton_Click(object sender, EventArgs e)
         {
             drawnNumbers.Clear();
+
             if (!this.current_player.isPaid(cards_count))
             {
                 MessageBox.Show("К сожалению у вас не хватает средств для покупки билета!", "=(", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -315,7 +325,19 @@ namespace RussianLoto
             MessageBox.Show("Игра закончена!", "Игра", MessageBoxButtons.OK, MessageBoxIcon.Information);
             gameSettingsPanel.Enabled = true;
             fieldVisible(false);
+            ResetCards();
             CalculateResults();
+        }
+
+        private void ResetCards()
+        {
+
+            for (int i = 0; i < cards.Length; ++i)
+            {
+                cards[i] = new Card(); // Сбрасываем карточку
+            }
+
+            InitializeDataGridView();
         }
 
         private void CalculateResults()
@@ -328,7 +350,8 @@ namespace RussianLoto
         {
             if (drawnNumbers.Count < 90)
                 Play();
-            else TheEnd();
+            else 
+                TheEnd();
         }
 
         private static int cards_count = 0;
@@ -337,7 +360,6 @@ namespace RussianLoto
         {
 
             RadioButton current_radiobutton = (RadioButton)sender;
-
 
             switch (current_radiobutton.Name)
             {
@@ -355,15 +377,19 @@ namespace RussianLoto
                     break;
             }
 
+            RefreshCardsInfo();
+
+            InitializeDataGridView();
+        }
+
+        private void RefreshCardsInfo()
+        {
             Array.Resize(ref cards, cards_count);
 
             for (int i = 0; i < cards_count; ++i)
             {
                 cards[i] = new Card();
             }
-
-            InitializeDataGridView();
-
         }
 
         private void changeDifficulty_RadioButtons(object sender, EventArgs e)

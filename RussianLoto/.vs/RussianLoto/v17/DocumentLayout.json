@@ -1,46 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\",
+  "WorkspaceRootPath": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|c:\\users\\ryche\\onedrive\\desktop\\russian_loto\\russianloto\\russianloto\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|c:\\users\\ryche\\desktop\\russian_loto\\russianloto\\russianloto\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|solutionrelative:russianloto\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\russianloto\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|solutionrelative:russianloto\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|c:\\users\\ryche\\desktop\\russian_loto\\russianloto\\russianloto\\signinform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|solutionrelative:russianloto\\signinform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\russianloto\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\russianloto\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|solutionrelative:russianloto\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\russianloto\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
-      "RelativeMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|solutionrelative:russianloto\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\russianloto\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\russianloto\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|solutionrelative:russianloto\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\russianloto\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\russianloto\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|solutionrelative:russianloto\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|c:\\users\\ryche\\desktop\\russian_loto\\russianloto\\russianloto\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|solutionrelative:russianloto\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\russianloto\\signinform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|solutionrelative:russianloto\\signinform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\russianloto\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
+      "RelativeMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|solutionrelative:russianloto\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\russianloto\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|solutionrelative:russianloto\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\russianloto\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\russianloto\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|solutionrelative:russianloto\\settingsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\russianloto\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\russianloto\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|solutionrelative:russianloto\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\russianloto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\russianloto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|solutionrelative:russianloto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\russianloto\\signinform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D60E371C-8E86-41EF-83EE-5365504CEE17}|RussianLoto\\RussianLoto.csproj|solutionrelative:russianloto\\signinform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,40 +58,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 685,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\MainForm.cs",
               "RelativeDocumentMoniker": "RussianLoto\\MainForm.cs",
-              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\MainForm.cs",
+              "ToolTip": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\MainForm.cs",
               "RelativeToolTip": "RussianLoto\\MainForm.cs",
-              "ViewState": "AQIAAAcBAAAAAAAAAAAuwBkBAAA5AAAA",
+              "ViewState": "AQIAAEoAAAAAAAAAAAApwFgAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-15T16:18:41.799Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SettingsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\SettingsForm.cs",
-              "RelativeDocumentMoniker": "RussianLoto\\SettingsForm.cs",
-              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\SettingsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "RussianLoto\\SettingsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentIndex": 1,
+              "Title": "SigninForm.cs",
+              "DocumentMoniker": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\SigninForm.cs",
+              "RelativeDocumentMoniker": "RussianLoto\\SigninForm.cs",
+              "ToolTip": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\SigninForm.cs",
+              "RelativeToolTip": "RussianLoto\\SigninForm.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAASwDoAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T16:45:45.118Z",
-              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+              "WhenOpened": "2024-09-20T09:09:54.622Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "LoginForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\LoginForm.cs",
               "RelativeDocumentMoniker": "RussianLoto\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\LoginForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\LoginForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "RussianLoto\\LoginForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T22:17:52.881Z",
@@ -91,24 +104,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "LoginForm.cs",
-              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\LoginForm.cs",
               "RelativeDocumentMoniker": "RussianLoto\\LoginForm.cs",
-              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\LoginForm.cs",
               "RelativeToolTip": "RussianLoto\\LoginForm.cs",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAowEIAAAA8AAAA",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAlwEkAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-15T17:58:37.664Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Settings.settings",
-              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\Properties\\Settings.settings",
+              "DocumentMoniker": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\Properties\\Settings.settings",
               "RelativeDocumentMoniker": "RussianLoto\\Properties\\Settings.settings",
-              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\Properties\\Settings.settings",
+              "ToolTip": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\Properties\\Settings.settings",
               "RelativeToolTip": "RussianLoto\\Properties\\Settings.settings",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002767|",
               "WhenOpened": "2024-09-17T17:09:09.086Z",
@@ -116,11 +129,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\MainForm.cs",
               "RelativeDocumentMoniker": "RussianLoto\\MainForm.cs",
-              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "RussianLoto\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-11T15:44:04.433Z",
@@ -128,24 +141,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SettingsForm.cs",
-              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\SettingsForm.cs",
+              "DocumentIndex": 8,
+              "Title": "SettingsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\SettingsForm.cs",
               "RelativeDocumentMoniker": "RussianLoto\\SettingsForm.cs",
-              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\SettingsForm.cs",
-              "RelativeToolTip": "RussianLoto\\SettingsForm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAVAAAA",
+              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\SettingsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "..\\..\\..\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\SettingsForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-17T16:32:34.421Z",
+              "WhenOpened": "2024-09-17T16:45:45.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Database.cs",
+              "DocumentMoniker": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\Database.cs",
+              "RelativeDocumentMoniker": "RussianLoto\\Database.cs",
+              "ToolTip": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\Database.cs",
+              "RelativeToolTip": "RussianLoto\\Database.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAnwB0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-20T09:07:09.594Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
+              "Title": "SigninForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\SigninForm.cs",
+              "RelativeDocumentMoniker": "RussianLoto\\SigninForm.cs",
+              "ToolTip": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\SigninForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "RussianLoto\\SigninForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T22:18:30.897Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SettingsForm.cs",
+              "DocumentMoniker": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\SettingsForm.cs",
+              "RelativeDocumentMoniker": "RussianLoto\\SettingsForm.cs",
+              "ToolTip": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\SettingsForm.cs",
+              "RelativeToolTip": "RussianLoto\\SettingsForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACsAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T16:32:34.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Card.cs",
-              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\Card.cs",
+              "DocumentMoniker": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\Card.cs",
               "RelativeDocumentMoniker": "RussianLoto\\Card.cs",
-              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\Card.cs",
+              "ToolTip": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\Card.cs",
               "RelativeToolTip": "RussianLoto\\Card.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -153,26 +201,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\Program.cs",
               "RelativeDocumentMoniker": "RussianLoto\\Program.cs",
-              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\Program.cs",
+              "ToolTip": "C:\\Users\\ryche\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\Program.cs",
               "RelativeToolTip": "RussianLoto\\Program.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAYwBUAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T15:01:28.915Z"
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 857,
+          "SelectedChildIndex": -1,
+          "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SigninForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\SigninForm.cs",
-              "RelativeDocumentMoniker": "RussianLoto\\SigninForm.cs",
-              "ToolTip": "C:\\Users\\ryche\\OneDrive\\Desktop\\russian_loto\\RussianLoto\\RussianLoto\\SigninForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "RelativeToolTip": "RussianLoto\\SigninForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T22:18:30.897Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             }
           ]
         }
